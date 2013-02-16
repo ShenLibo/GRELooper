@@ -119,8 +119,9 @@ li {
 
 li>a {
     color: #000;
+    font-size: 26px;
     display: block;
-    padding: 5px;
+    padding: 15px 20px;
     text-decoration: none;
     width: 100%;
     -webkit-box-flex: 1;
@@ -174,7 +175,10 @@ li>a.tappable-active {
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
 	background-color:#dfdfdf;
+}
 
+.list-filter {
+    width:100px;
 }
 
 h1 {
@@ -188,6 +192,39 @@ h2 {
     font-weight: normal;
     padding: 0px;
     margin: 0px;
+}
+
+.title {
+    margin:20px;
+    font-size: 30px;
+}
+
+.description {
+    margin:20px;
+    font-size: 26px;
+}
+
+.hardness_wrapper {
+    position:absolute;
+    bottom:30px;
+    right:60px;
+    padding: 20px;
+    background-color:#ededed;
+    -moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #dcdcdc;
+}
+
+.hardness-button {
+    font-size:26px;
+    width: 20px;
+    text-align:center;
+}
+#hardness {
+    font-size: 30px;
+
+    
 }
 
 .employee-image {
