@@ -43,14 +43,14 @@ var app = {
             if (this.homePage) {
                 this.slidePage(this.homePage);
                 this.homePage.el.on('click', '#shuffle-btn', this.homePage.findByList);
-                $('.scroll').scrollTop(this.listScrollTop)       
+                // $('.scroll').scrollTop(this.listScrollTop)       
             } else {
                 this.homePage = new HomeView(this.store).render();
                 this.slidePage(this.homePage);
             }
             return;
         }
-        this.listScrollTop = $('.scroll').scrollTop()
+        // this.listScrollTop = $('.scroll').scrollTop()
         var match = hash.match(this.detailsURL);
         if (match) {
             this.store.findById(Number(match[1]), function(word) {

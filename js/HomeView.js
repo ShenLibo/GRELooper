@@ -11,6 +11,13 @@ var HomeView = function(store) {
         store.findByListAndHandness($('#list-filter').val(), $('#hardness-filter').val(), function(words) {
             $('.words-list').html(HomeView.liTemplate(words.sort(function() { return 0.5 - Math.random();})));
         });
+        if (self.iscroll) {
+            console.log('Refresh iScroll');
+            self.iscroll.refresh();
+        } else {
+            console.log('New iScroll');
+            self.iscroll = new iScroll($('.scroll', self.el)[0], {hScrollbar: false, vScrollbar: false });
+        }
     }
 
     this.render = function() {
