@@ -1,0 +1,60 @@
+<html>
+<head>
+	<!-- // <script src="css/source-sans-pro.js"></script> -->
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class='header'><h1>GRE Looper</h1></div>
+    <div class='search-bar'><input id='list-filter' class='list-filter' type="number"/>
+        <select id='hardness-filter'>
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select>
+        <a id="shuffle-btn" class="button header-button-right">Shuffle</a>
+    </div>
+    <div class='scroll'>
+    	<ul class='words-list'></ul>
+    </div>
+</script>
+
+<script id="words-li-tpl" type="text/x-handlebars-template">
+    {{#.}}
+    <li><a href="#word/{{this.id}}">{{this.English}}</a></li>
+    {{/.}}
+</script>
+
+<script id="word-tpl" type="text/x-handlebars-template">
+    <div class='header'><a href="#" class="button header-button header-button-left">Back</a><h1>Details</h1></div>
+    <div class='details'>
+        <h1>{{English}}</h1>
+        <div>
+            <a id="hardnessDec-btn" class="button">-</a>
+            <span id='hardness'>{{hardness}}</span>
+            <a id="hardnessInc-btn" class="button">+</a>
+        </div>
+        <h2>{{Chinese}}</h2>
+    </div>
+    <script>
+    var id = {{id}};
+    </script>
+</script>
+
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="phonegap.js"></script>
+<script src="js/storage/vocabulary_init.js"></script>
+<script src="js/storage/websql-store.js"></script>
+<script src="js/HomeView.js"></script>
+<script src="js/WordView.js"></script>
+<script src="js/main.js"></script>
+
+
+
+</body>
+</html>
