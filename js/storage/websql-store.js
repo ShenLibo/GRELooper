@@ -23,7 +23,7 @@ var WebSqlStore = function(successCallback, errorCallback) {
     }
 
     this.createTable = function(tx) {
-        tx.executeSql('DROP TABLE IF EXISTS vocabulary');
+        // tx.executeSql('DROP TABLE IF EXISTS vocabulary');
         var sql = "CREATE TABLE IF NOT EXISTS vocabulary ( " +
             "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
             "English VARCHAR(50), " +
